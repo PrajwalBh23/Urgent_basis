@@ -1,0 +1,151 @@
+
+/* .box{
+    border: 1px solid red;
+    width: 800px;
+    margin-left: 20%;
+    margin-top: 12%;
+    background-color: transparent;
+
+}
+.box h2{
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+ 
+} */
+
+.box {
+    background: rgba(255, 255, 255, 0.15); /* Background color with transparency */
+    backdrop-filter: blur(10px); /* Apply blur effect */
+    border-radius: 10px; /* Rounded corners */
+    border: 1px solid rgba(255, 255, 255, 0.18); /* Border with transparency */
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); /* Box shadow */
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    margin: 6% 27%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: bold;
+}
+
+.form-group input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-group.inline {
+    flex-direction: row;
+    align-items: center;
+}
+
+.form-group.inline label {
+    margin-right: 10px;
+}
+
+button {
+    width: 15%;
+    padding: 10px;
+    margin-left: 45%;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+.button{
+    display: flex;
+    flex-direction: row;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+}
+.contain{
+    height: 100vh; /* Set height to 100% of viewport height */
+    background-image: url('./images/linde-minutes_39x22.jpg');
+    background-repeat: no-repeat;
+    background-size: cover; /* Ensure the background image covers the container */
+
+}
+.logo{
+    display: flex;
+    flex-direction: row;
+    margin-left: 40px;
+}
+
+.container img {
+    height: 200px;
+    width: auto;
+}
+
+.right{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 65%;
+    margin-top: 3%;
+}
+
+.right img {
+    width: 50px;
+    height: 50px;
+    margin: 0px 20px;
+    border-radius: 50%;
+}
+
+.text {
+    margin-top: 28%;
+    font-size: xx-large;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+}.dialog-box {
+    display: none;
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+}
+
+.dialog-box a {
+    display: block;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}

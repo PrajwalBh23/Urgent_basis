@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newzoly</title>
+    <link rel="stylesheet" href="./Navbar.css">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js" defer></script>
+</head>
+
+<body>
+    <div class="contain">
+        <div class="contain_all">
+            <div class="container">
+                <div class="logo"><img src="./images/national-emblem.png" alt=""><span class="text">Newzoly</span></div>
+                <div class="right"><img src="./images/person.png" alt="" id="person-icon"><img src="./images/notify.png"
+                        alt=""></div>
+            </div>
+        </div>
+        <!-- Dialog box -->
+        <div id="dialog-box" class="dialog-box">
+            <a id="login-link" href="#">Login</a>
+            <a id="signup-link" href="#">Sign up</a>
+        </div>
+        <div class="box" id="forgot-password-box">
+            <h2>Forget Password</h2>
+            <form>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="newpass">Enter New Password</label>
+                    <input type="text" id="newpass" name="newpass" required>
+                </div>
+                <div class="form-group">
+                    <label for="newpass1">Re-Enter New Password</label>
+                    <input type="text" id="newpass1" name="newpass1" required>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+    <script>
+        // Function to retrieve user data from local storage
+        const getUserDataFromStorage = () => {
+            const userData = localStorage.getItem('usersData');
+            return userData ? JSON.parse(userData) : {}; // If no data exists, return an empty object
+        };
+
+        // Function to update user password in local storage
+        const updateUserPassword = (email, newPassword) => {
+            const userData = getUserDataFromStorage();
+            if (userData.hasOwnProperty(email)) {
+                // Update password if the user exists
+                userData[email] = newPassword;
+                localStorage.setItem('usersData', JSON.stringify(userData));
+                return true; // Return true if password updated successfully
+            }
+            return false; // Return false if user doesn't exist
+        };
+
+        // Function to handle form submission for password reset
+        const handlePasswordReset = (event) => {
+            event.preventDefault(); // Prevent the default form submission
+
+            // Get form input values
+            const email = document.getElementById('email').value;
+            const newPassword = document.getElementById('newpass').value;
+            const confirmPassword = document.getElementById('newpass1').value;
+
+            // Check if new password and confirm password match
+            if (newPassword !== confirmPassword) {
+                alert("New password and confirm password don't match.");
+                return;
+            }
+
+            // Update password in local storage
+            const passwordUpdated = updateUserPassword(email, newPassword);
+            if (passwordUpdated) {
+                alert('Password reset successful!');
+                window.location.href = 'index.html';
+                // Optionally, redirect the user to another page or perform additional actions
+            } else {
+                alert('User not found. Please sign up.');
+            }
+        };
+
+        // Add event listener to the password reset form
+        document.querySelector('#forgot-password-box form').addEventListener('submit', handlePasswordReset);
+
+    </script>
+
+</body>
+
+</html>

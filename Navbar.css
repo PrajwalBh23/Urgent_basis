@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+}
+.contain{
+    height: 100vh; /* Set height to 100% of viewport height */
+    background-image: url('./images/linde-minutes_39x22.jpg');
+    background-repeat: no-repeat;
+    background-size: cover; /* Ensure the background image covers the container */
+
+}
+.logo{
+    display: flex;
+    flex-direction: row;
+    margin-left: 40px;
+}
+
+.container img {
+    height: 200px;
+    width: auto;
+}
+
+.right{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 65%;
+    margin-top: 3%;
+}
+
+.right img {
+    width: 50px;
+    height: 50px;
+    margin: 0px 20px;
+    border-radius: 50%;
+}
+
+.text {
+    margin-top: 28%;
+    font-size: xx-large;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+}
+.dialog-box {
+    display: none;
+    position: absolute; /* Position the dialog box relative to its containing element */
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow effect */
+    z-index: 1000; /* Ensure the dialog box appears above other elements */
+}
+
+/* Show the dialog box */
+.dialog-box.show {
+    display: block;
+}
+
+/* Style the links inside the dialog box */
+.dialog-box a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #333; /* Set link color */
+    transition: background-color 0.3s; /* Add transition effect for background color */
+}
+
+/* Hover effect for links */
+.dialog-box a:hover {
+    background-color: #f0f0f0; /* Change background color on hover */
+}

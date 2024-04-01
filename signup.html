@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newzoly</title>
+    <link rel="stylesheet" href="./Navbar.css">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js" defer></script>
+</head>
+
+<body>
+    <div class="contain">
+        <div class="contain_all">
+            <div class="container">
+                <div class="logo"><img src="./images/national-emblem.png" alt=""><span class="text">Newzoly</span></div>
+                <div class="right"><img src="./images/person.png" alt="" id="person-icon"><img src="./images/notify.png"
+                        alt=""></div>
+            </div>
+        </div>
+        <!-- Dialog box -->
+        <div id="dialog-box" class="dialog-box">
+            <a id="login-link" href="/login.html">Login</a>
+            <a id="signup-link" href="/signup.html">Sign up</a>
+        </div>
+    
+
+        <div class="box">
+            <h2>Create New Account</h2>
+            <form id="signup-form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="contact-number">Contact Number</label>
+                    <input type="tel" id="contact-number" name="contact-number" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit">Sign up</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
